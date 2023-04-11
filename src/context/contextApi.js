@@ -15,7 +15,7 @@ export const AppContext = (props)=>{
   const fetchSelectedCategoriedata = (query)=>{
         setLoading(true);
         fetchDatafromApi(`search/?q=${query}`).then((res)=>{
-          console.log(res?.data?.contents);
+          // console.log(res?.data?.contents); 
           setSearchresult(res?.data?.contents);
           setLoading(false);
         });

@@ -3,7 +3,7 @@ import {AppContext} from '../src/context/contextApi';
 import Header from "./components/Header";
 import Feed from './components/Feed';
 import SearchResults from './components/SearchResults';
-import VideoDetail from './components/VideoDetail';
+import VideoDetails from './components/VideoDetail';
 // Router.
 import { BrowserRouter,Routes,Route } from "react-router-dom";
 function App() {
@@ -15,7 +15,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Feed />} />
           <Route path="/searchresult/:searchQuery" element={<SearchResults />} />
-          <Route path="/video/:id" element={<VideoDetail />} />
+          <Route path="/video/:id" element={<VideoDetails />} />
         </Routes>
        </div>
      </BrowserRouter>
