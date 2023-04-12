@@ -33,7 +33,7 @@ const Header = () => {
   const pagename = pathname?.split("/")?.filter(Boolean)?.[0];
 
   return (
-    <div className='sticky top-[0%] z-10 h-[50px] flex flex-row justify-between items-center  bg-black px-1 md:px-5 dark:bg-black'>
+    <div className='sticky top-[0%] z-10 h-[50px] flex flex-row justify-between items-center  bg-black px-1  md:px-10 dark:bg-black'>
       {Loading && <Loader  />}
       <div className='flex items-center h-5'>
         {pagename !== 'video' && (
@@ -64,9 +64,12 @@ const Header = () => {
             onChange={(e) => setsearchQuery(e.target.value)}
             onKeyUp={searchQueryHandle}
             value={searchQuery}
+            placeholder="Search"
           />
         </div>
-        <button className='w-[40px] md:w-[60px] h-8 md:h-10 flex items-center justify-center border border-l-0 border-[#303030] rounded-r-3xl bg-white/[0.1]'>
+        <button className='w-[40px] md:w-[60px] h-8 md:h-10 flex items-center justify-center border border-l-0 border-[#303030] rounded-r-3xl bg-white/[0.1]'
+        onClick={()=> searchQueryHandle("searchButton")}
+        >
           <IoIosSearch className='text-white text-xl' />
         </button>
       </div>

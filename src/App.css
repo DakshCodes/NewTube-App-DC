@@ -75,3 +75,7 @@ code {
         height: 100vh !important;
     }
 }
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
